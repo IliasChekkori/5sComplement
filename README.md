@@ -8,7 +8,7 @@ We wanted to create a website where farmers can buy, sell, and view, waste produ
 
 
 
-**Why did we pick it?
+**Why did we pick it?**
 
 First we feel it is important to define Sustainability. Sustainability is the ability to meet the needs of the present without compromising the ability of future generations to meet their own needs. In the context of agriculture, sustainability means producing food in a way that is environmentally, socially, and economically responsible.
 
@@ -16,7 +16,7 @@ Food waste is a significant challenge to achieving sustainability in agriculture
 
 
 
-**Documentation:
+**Documentation:**
 
 Drive: All of our documents are on the google drive.
 
