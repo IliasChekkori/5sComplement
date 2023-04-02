@@ -38,7 +38,16 @@ Request:
 Brainstorm: Where we did most of our brainstorm. [https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing](https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing)
 Here we also created a brainstorm, where brainstormed how the specific website would look. We include the different landing pages, and what they purpose of them would be. 
 
+Runthrough of Website
 
 
+Next Steps:
+We do see a future for this idea. It is an innovative product that helps a niche group, and can become really helpful in the agricultural industry. Below are some additional features the website could incorporate:
+   ```
+   1. Incorporate a messaging system in the website
+   2. Incorporate AI response 
+   3. Sort based on location
+   4. Create categories to work
+   ```
 
 
