@@ -1,6 +1,7 @@
+
 body {
-    background-color: #d3dfd5;
-    font-family:Big Caslon;
+    background-color: #f0f4f1;
+    font-family:Optima;
     font-size: 19px;
 
   }
@@ -13,10 +14,29 @@ body {
     max-width: 600px;
     padding: 20px;
   }
+  /* .close-button {
+    position: absolute;
+    margin-right: 350px;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+  } */
+  
+  form {
+    position: relative;
+  }
+  
   
   label {
     display: block;
-    font-weight: bold;
     margin-top: 10px;
   }
   
