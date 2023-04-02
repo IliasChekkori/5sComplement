@@ -38,7 +38,7 @@ Request:
 Brainstorm: Where we did most of our brainstorm. [https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing](https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing)
 Here we also created a brainstorm, where brainstormed how the specific website would look. We include the different landing pages, and what they purpose of them would be. 
 
-**Runthrough of Website
+**Runthrough of Website**
 ```
 - Initially, users are prompted to login using Google Oauth.
 - The home and any other page can only be accessed once a user has successfully logged in
