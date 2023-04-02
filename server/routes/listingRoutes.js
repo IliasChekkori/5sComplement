@@ -2,7 +2,7 @@ const Listing = require('../models/listingModel');
 const epxress = require("express"); 
 const router = epxress.Router(); 
 
-router.route('/listings').get((req, res) => {
+router.route('/').get((req, res) => {
     Listing.find()
     .lean()
     .then((listings) => {
@@ -13,7 +13,7 @@ router.route('/listings').get((req, res) => {
     });
 });
 
-router.route('/listing').post((req, res) => { 
+router.route('/').post((req, res) => { 
     try { 
 
         const {user_id, name, picture, location, description, price, weight, quantity} = req.body; 
@@ -38,7 +38,7 @@ router.route('/listing').post((req, res) => {
 }
 );
 
-router.route('/listings/:id').get((req, res) => {
+router.route('/:id').get((req, res) => {
     Listing.findById(req.params.id)
       .lean()
       .then((listing) => {
