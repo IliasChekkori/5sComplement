@@ -39,7 +39,14 @@ Brainstorm: Where we did most of our brainstorm. [https://docs.google.com/docume
 Here we also created a brainstorm, where brainstormed how the specific website would look. We include the different landing pages, and what they purpose of them would be. 
 
 **Runthrough of Website
-
+```
+- Initially, users are prompted to login using Google Oauth.
+- The home and any other page can only be accessed once a user has successfully logged in
+- Next, the home page is presented to the user, in which they are able to see various postings, contact the seller, and list their own waste.
+- This page will also allow users to see and edit their profile
+- Essentially, our website fucntions as a market place for farmers
+- However, the app is not exclusive to farmers, corporations, individuals, and various other entities can also manage their waste through our app
+```
 
 **Next Steps:**
 We do see a future for this idea. It is an innovative product that helps a niche group, and can become really helpful in the agricultural industry. Below are some additional features the website could incorporate:
