@@ -1,9 +1,7 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-/*
 
-*/
 function Home () {
 
     const [listingsArray, setListingsArray] = useState([]);
@@ -54,6 +52,11 @@ console.log(listingsArray); // this will log an empty array
   }
   return (
     <div className={`page ${showPopup ? 'blurred' : ''}`}>
+        <div className="navbar">
+  <button onClick={() => navigate("/home")}>Home</button>
+  <button onClick={() => navigate("/profile")}>Profile</button>
+  <button onClick={() => navigate("/messages")}>Messages</button>
+</div>
         <h2 className='title'> Today's Market</h2>
         <p><b> Our Mission: </b> To help everyday farmers reduce waste. </p>
         <p> We have created a website where farmers can sell their agricultural waste, and anyone can buy.</p> <p> Click the offer's that intrest you, and make sure to add your own listing. </p>
