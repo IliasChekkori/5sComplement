@@ -16,7 +16,16 @@
   .item-container.blur {
     filter: blur(4px);
   }
-  
+  .title{
+    margin-top: 7%;
+    margin-bottom: 1%;
+  }
+.search-container{
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 10%;
+}
   .item {
     display: flex;
     flex-direction: column;

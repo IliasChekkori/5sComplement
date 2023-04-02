@@ -54,6 +54,10 @@ console.log(listingsArray); // this will log an empty array
   }
   return (
     <div className={`page ${showPopup ? 'blurred' : ''}`}>
+        <h2 className='title'> Today's Market</h2>
+        <p><b> Our Mission: </b> To help everyday farmers reduce waste. </p>
+        <p> We have created a website where farmers can sell their agricultural waste, and anyone can buy.</p> <p> Click the offer's that intrest you, and make sure to add your own listing. </p>
+        <p> </p>
       <div className="search-container">
         <input type="text" placeholder="Search" onChange={handleSearch} />
         <button onClick={ () => goToAdd()}> + (ADD LISTING)</button>
