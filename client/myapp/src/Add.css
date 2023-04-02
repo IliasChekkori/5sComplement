@@ -1,0 +1,50 @@
+body {
+    background-color: #d3dfd5;
+    font-family:Big Caslon;
+    font-size: 19px;
+
+  }
+  
+  form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #0a480a;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+  }
+  
