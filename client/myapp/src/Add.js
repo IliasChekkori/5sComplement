@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Add.css';
 import { useNavigate } from "react-router-dom";
+import { AiFillHome} from "react-icons/ai";
+import { AiFillMessage} from "react-icons/ai";
+import { MdAccountCircle} from "react-icons/md";
 
 const AddListing = () => {
   const [name, setName] = useState('');
@@ -74,7 +77,11 @@ const AddListing = () => {
 
   return (
     <div className="add-listing-form">
-      <button className="close-button" onClick={handleGoHome}>x</button>
+         <div className="navbar">
+  <button onClick={() => navigate("/home")}><AiFillHome /></button>
+  <button onClick={() => navigate("/profile")}><MdAccountCircle /></button>
+  <button onClick={() => navigate("/messages")}><AiFillMessage/></button>
+</div>
       <form onSubmit={handleSubmit}>
         <label>
           Name
@@ -101,7 +108,7 @@ const AddListing = () => {
           <input type="text" value={location} onChange={(event) => setLocation(event.target.value)} />
         </label>
         <label>
-          Images
+          Image
           <br />
           <input type="file" accept="image/*" multiple onChange={handlePictureSelect} />
         </label>

@@ -67,4 +67,26 @@ body {
     margin: 20px auto 0;
     padding: 10px 20px;
   }
+
+  .navbar {
+    display: flex;
+    margin-left: 80%;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 38px;
+    margin-right: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navbar button:hover {
+    color: #555;
+  }
   

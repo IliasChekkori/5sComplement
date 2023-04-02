@@ -1,6 +1,13 @@
 import './Home.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { AiFillHome} from "react-icons/ai";
+import { AiFillMessage} from "react-icons/ai";
+import { MdAccountCircle} from "react-icons/md";
+import { GrAdd} from "react-icons/gr";
+
+
+
 
 function Home () {
 
@@ -53,17 +60,20 @@ console.log(listingsArray); // this will log an empty array
   return (
     <div className={`page ${showPopup ? 'blurred' : ''}`}>
         <div className="navbar">
-  <button onClick={() => navigate("/home")}>Home</button>
-  <button onClick={() => navigate("/profile")}>Profile</button>
-  <button onClick={() => navigate("/messages")}>Messages</button>
+ 
+  <button onClick={() => navigate("/profile")}><MdAccountCircle /></button>
+  <button onClick={() => navigate("/messages")}><AiFillMessage/></button>
+  
 </div>
-        <h2 className='title'> Today's Market</h2>
-        <p><b> Our Mission: </b> To help everyday farmers reduce waste. </p>
-        <p> We have created a website where farmers can sell their agricultural waste, and anyone can buy.</p> <p> Click the offer's that intrest you, and make sure to add your own listing. </p>
+<div className = "add">
+<button onClick={ () => goToAdd()}> <GrAdd/></button>
+</div>
+        <h2 className='title'> EarthlyExchange</h2>
+        <p><b> Our Mission: </b> To Reduce Farmers' Waste </p>
+        <p> A platform where surplus produce can be sold and bought, allowing you to contribute to sustainability while enjoying fresh, locally sourced products. </p>
         <p> </p>
       <div className="search-container">
         <input type="text" placeholder="Search" onChange={handleSearch} />
-        <button onClick={ () => goToAdd()}> + (ADD LISTING)</button>
       </div>
       <div className="item-container">
         {filteredData.map((item) => (
