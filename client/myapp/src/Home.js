@@ -60,7 +60,7 @@ console.log(listingsArray); // this will log an empty array
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   function goToMessage(){
-    navigate("/message");
+    navigate("/messages");
   }
   function goToAdd(){
     navigate("/add");
