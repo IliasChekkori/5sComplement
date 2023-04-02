@@ -6,9 +6,19 @@ const mongoose = require('mongoose');
 
 
 const router = require('./routes/listingRoutes');
+const userRouter = require('./routes/userRoutes');
+const conversationRouter = require('./routes/conversationRoutes'); 
+const messageRouter = require('./routes/messagesRoutes'); 
+
 
 
 const app = express(); 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
 const PORT = process.env.PORT; 
 
 
@@ -22,6 +32,9 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use(express.json()); 
 app.use("/listing", router);
+app.use("/user", userRouter);
+app.use("/conversation", conversationRouter);
+app.use("/messages", messageRouter);
 
 
 app.listen(PORT, console.log("server started on port", PORT));

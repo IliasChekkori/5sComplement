@@ -1,4 +1,3 @@
-
 const Listing = require('../models/listingModel'); 
 const epxress = require("express"); 
 const router = epxress.Router(); 
