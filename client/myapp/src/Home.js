@@ -2,10 +2,22 @@ import './Home.css';
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 /*
-Do it with fetch now
 
 */
 function Home () {
+
+    const listingsArray = [];
+
+    fetch("http://localhost:5020/listing").then(response => response.json())
+    .then(data => {
+    // Assign the fetched data to listingsArray
+    listingsArray.push(...data);
+    //console.log(listingsArray);
+  });
+
+console.log(listingsArray); // this will log an empty array
+
+
   const [showPopup, setShowPopup] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItem, setItem] = useState("");
