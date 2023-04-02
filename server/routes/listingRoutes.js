@@ -29,9 +29,12 @@ router.route('/').post((req, res) => {
         })
 
         newListing.save(); 
-        const listings =  Listing.find(); 
-        res.status(200).json(listings); 
-
+        Listing.find().lean().then((listings) => {
+          res.status(200).json(listings);
+        })
+        .catch((err) => {
+          res.status(404).json({ message: err.message });
+        });
     }catch (err) { 
         res.status(409).json({message: err.message});
     }
