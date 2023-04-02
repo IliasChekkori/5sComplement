@@ -1,18 +1,26 @@
 import './Home.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import { AiFillHome} from "react-icons/ai";
 import { AiFillMessage} from "react-icons/ai";
 import { MdAccountCircle} from "react-icons/md";
 import { GrAdd} from "react-icons/gr";
-
-
-
-
+import { GlobalContext } from './App';
 function Home () {
-
+    const [globalState, setGlobalState] = useContext(GlobalContext);
     const [listingsArray, setListingsArray] = useState([]);
+    const navigate = useNavigate();  
+   
+    useEffect(() =>  {
+      if (!globalState.loggedIn){
+        navigate('/');
+        console.log("not loggedIN")
+      }else{
+        
+      }
 
+
+    }, [])
     useEffect(() => {
       async function getListings() {
         try {
@@ -32,7 +40,7 @@ console.log(listingsArray); // this will log an empty array
   const [showPopup, setShowPopup] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItem, setItem] = useState("");
-  const navigate = useNavigate();  
+  
 
   function popUp(list){
     setShowPopup(true);
@@ -58,7 +66,8 @@ console.log(listingsArray); // this will log an empty array
     navigate("/add");
   }
   return (
-    <div className={`page ${showPopup ? 'blurred' : ''}`}>
+    <div>
+      {globalState.loggedIn && <div className={`page ${showPopup ? 'blurred' : ''}`}>
         <div className="navbar">
  
   <button onClick={() => navigate("/profile")}><MdAccountCircle /></button>
@@ -98,6 +107,7 @@ console.log(listingsArray); // this will log an empty array
         <button onClick={ () => goToMessage()}> Contact the Seller</button>
       </div>
       )}
+    </div>}
     </div>
   );
 }

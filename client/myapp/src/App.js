@@ -6,8 +6,15 @@ import Profile from './Profile';
 import Messages from './messages';
 import SignUp from './signup';
 import Add from './Add';
+
+import { createContext, useState } from 'react';
+export const GlobalContext = createContext();
+
 function App() {
+
+const [globalState, setGlobalState] = useState({loggedIn: false, user: {}})
   return (
+    <GlobalContext.Provider value={[globalState, setGlobalState]}>
     <div className="App"> 
         <BrowserRouter>
         <Routes>
@@ -20,6 +27,7 @@ function App() {
           </Routes>
         </BrowserRouter>
     </div> 
+    </GlobalContext.Provider>
   );
 }
 
