@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Add.css';
+import { useNavigate } from "react-router-dom";
+import { AiFillHome} from "react-icons/ai";
+import { AiFillMessage} from "react-icons/ai";
+import { MdAccountCircle} from "react-icons/md";
 
 const AddListing = () => {
   const [name, setName] = useState('');
@@ -9,7 +13,7 @@ const AddListing = () => {
   const [quantity, setQuantity] = useState('');
   const [location, setLocation] = useState('');
   const [pictures, setPictures] = useState([]);
-
+  const navigate = useNavigate();  
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -37,10 +41,12 @@ const AddListing = () => {
 
       const listings = await response.json();
       console.log('Listings:', listings);
+      navigate('/home');
     } catch (error) {
       console.error('Error:', error);
     }
   };
+  
 
   const handlePictureSelect = (event) => {
     const files = event.target.files;
@@ -57,7 +63,9 @@ const AddListing = () => {
       };
     }
   };
-
+  const handleGoHome = () => {
+    navigate('/home');
+  }
   const addStylesheet = () => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -68,39 +76,45 @@ const AddListing = () => {
   addStylesheet();
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name
-        <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-      </label>
-      <label>
-        Description
-        <textarea value={description} onChange={(event) => setDescription(event.target.value)} />
-      </label>
-      <label>
-        Weight (lbs)
-        <input type="number" value={weight} onChange={(event) => setWeight(event.target.value)} />
-      </label>
-      <label>
-        Quantity
-        <input type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
-      </label>
-      <label>
-        Market price
-        <input type="number" value={marketPrice} onChange={(event) => setMarketPrice(event.target.value)} />
-      </label>
-      <label>
-        Location
-        <input type="text" value={location} onChange={(event) => setLocation(event.target.value)} />
-      </label>
-      <label>
-        Images
-        <br />
-        <input type="file" accept="image/*" multiple onChange={handlePictureSelect} />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
-
+    <div className="add-listing-form">
+         <div className="navbar">
+  <button onClick={() => navigate("/home")}><AiFillHome /></button>
+  <button onClick={() => navigate("/profile")}><MdAccountCircle /></button>
+  <button onClick={() => navigate("/messages")}><AiFillMessage/></button>
+</div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name
+          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
+        </label>
+        <label>
+          Description
+          <textarea value={description} onChange={(event) => setDescription(event.target.value)} />
+        </label>
+        <label>
+          Weight (lbs)
+          <input type="number" value={weight} onChange={(event) => setWeight(event.target.value)} />
+        </label>
+        <label>
+          Quantity
+          <input type="number" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
+        </label>
+        <label>
+          Market price
+          <input type="number" value={marketPrice} onChange={(event) => setMarketPrice(event.target.value)} />
+        </label>
+        <label>
+          Location
+          <input type="text" value={location} onChange={(event) => setLocation(event.target.value)} />
+        </label>
+        <label>
+          Image
+          <br />
+          <input type="file" accept="image/*" multiple onChange={handlePictureSelect} />
+        </label>
+        <button type="submit">Done</button>
+      </form>
+    </div>
   );
 };
 
