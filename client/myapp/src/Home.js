@@ -1,19 +1,25 @@
 import './Home.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 /*
 
 */
 function Home () {
 
-    const listingsArray = [];
+    const [listingsArray, setListingsArray] = useState([]);
 
-    fetch("http://localhost:5020/listing").then(response => response.json())
-    .then(data => {
-    // Assign the fetched data to listingsArray
-    listingsArray.push(...data);
-    //console.log(listingsArray);
-  });
+    useEffect(() => {
+      async function getListings() {
+        try {
+          const response = await fetch("http://localhost:5020/listing");
+          const data = await response.json();
+          setListingsArray(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      getListings();
+    }, []);
 
 console.log(listingsArray); // this will log an empty array
 
@@ -22,44 +28,6 @@ console.log(listingsArray); // this will log an empty array
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedItem, setItem] = useState("");
   const navigate = useNavigate();  
-  const dummyData = [
-    {
-      listing_id: 1241,
-      name: "Hay stack",
-      list_name: "Naod",
-      picture: "base 64 string",
-      poster: "Billy Farmer",
-      location: "Bethlehem",
-      description: "string",
-      price: 1,
-      weight: 2,
-      quantity: 3,
-    },
-    {
-      listing_id: 1242,
-      name: "Wheat Field",
-      list_name: "Naod",
-      picture: "base 64 string",
-      poster: "Jane Doe",
-      location: "New York",
-      description: "string",
-      price: 2,
-      weight: 3,
-      quantity: 4,
-    },
-    {
-      listing_id: 1243,
-      list_name: "Naod",
-      name: "Corn Farm",
-      picture: "base 64 string",
-      poster: "John Smith",
-      location: "Chicago",
-      description: "string",
-      price: 3,
-      weight: 4,
-      quantity: 5,
-    }
-  ];
 
   function popUp(list){
     setShowPopup(true);
@@ -75,23 +43,26 @@ console.log(listingsArray); // this will log an empty array
     setSearchQuery(e.target.value);
   }
 
-  const filteredData = dummyData.filter((item) =>
+  const filteredData = listingsArray.filter((item) =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
   function goToMessage(){
     navigate("/message");
   }
-
+  function goToAdd(){
+    navigate("/add");
+  }
   return (
     <div className={`page ${showPopup ? 'blurred' : ''}`}>
       <div className="search-container">
         <input type="text" placeholder="Search" onChange={handleSearch} />
+        <button onClick={ () => goToAdd()}> + (ADD LISTING)</button>
       </div>
       <div className="item-container">
         {filteredData.map((item) => (
           <div key={item.listing_id} className="item" onClick={() => popUp(item)}>
             <h2>{item.name}</h2>
-            <img src={item.picture} alt={item.name} />
+            <img src={item.picture} className = "IMG" alt={item.name} />
             <p>Location: {item.location}</p>
             <p>Price: {item.price}</p>
             <p>Weight: {item.weight}</p>

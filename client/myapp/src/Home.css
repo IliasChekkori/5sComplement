@@ -9,7 +9,10 @@
     gap: 20px;
     filter: blur(0px);
   }
-  
+  .IMG{
+    height: auto;
+    width: 70%;
+  }
   .item-container.blur {
     filter: blur(4px);
   }
