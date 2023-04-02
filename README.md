@@ -1,14 +1,14 @@
 README
 
 
-What is our project?
+**What is our project?**
 
 We wanted to create a website where farmers can buy, sell, and view, waste produced by other farmers. Users will be able to Log-in (sign-up), see the home page which consists of listings from other farmers, and either buy or add their own listing. If they see one that intrests them, (note, what they will buy is another farmers waste) they will contact the seller. They will see that farmers contact info, and by doing that we help connect farmers. 
 
 
 
 
-Why did we pick it?
+**Why did we pick it?
 
 First we feel it is important to define Sustainability. Sustainability is the ability to meet the needs of the present without compromising the ability of future generations to meet their own needs. In the context of agriculture, sustainability means producing food in a way that is environmentally, socially, and economically responsible.
 
@@ -16,7 +16,7 @@ Food waste is a significant challenge to achieving sustainability in agriculture
 
 
 
-Documentation:
+**Documentation:
 
 Drive: All of our documents are on the google drive.
 
@@ -38,10 +38,10 @@ Request:
 Brainstorm: Where we did most of our brainstorm. [https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing](https://docs.google.com/document/d/1N18YaJRKcYf4lUxsjB8ZmNzj5gygyvKnjAitiFkAzFY/edit?usp=sharing)
 Here we also created a brainstorm, where brainstormed how the specific website would look. We include the different landing pages, and what they purpose of them would be. 
 
-Runthrough of Website
+**Runthrough of Website
 
 
-Next Steps:
+**Next Steps:**
 We do see a future for this idea. It is an innovative product that helps a niche group, and can become really helpful in the agricultural industry. Below are some additional features the website could incorporate:
    ```
    1. Incorporate a messaging system in the website
