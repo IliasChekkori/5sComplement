@@ -17,6 +17,12 @@ Food waste is a significant challenge to achieving sustainability in agriculture
 
 
 **Documentation:**
+How to Open Our Website?
+1) Open the terminal and move into the server directory, and run npm install
+2) Then run the command "node index.js", you should see the database being connected
+3) Then in a new terminal window, open client 
+4) run "npm i"
+5) After everything is installed, run npm start
 
 Drive: All of our documents are on the google drive.
 
